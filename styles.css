@@ -1,0 +1,138 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:root {
+  /* bg colors */
+  --bg-white: #fff;
+  --bg-beige: #fff8e7;
+  --bg-green: #00563b;
+  --bg-light-green: #177245;
+  /* font colors */
+  --fc-light-gray: #555555;
+  --fc-black: #010b13;
+  --fc-green: #00563b;
+  --fc-white: #fff;
+  /* font family */
+  --ff-body: sans-serif;
+  --ff-headings: sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg-beige);
+  font-family: var(--ff-body);
+  font-weight: normal;
+  font-size: 1rem;
+  color: var(--fc-light-gray);
+  line-height: 1.4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 2rem 1rem;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+/* product img section */
+.product-img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* produc info section */
+.product-info {
+  background-color: var(--bg-white);
+  padding: 2rem;
+}
+
+.product-tag {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-name {
+  color: var(--fc-black);
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--fc-green);
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.prev-price {
+  font-size: 0.95rem;
+  font-weight: normal;
+  color: var(--fc-light-gray);
+  text-decoration: line-through;
+}
+
+.btn {
+  border: none;
+  padding: 1rem 0;
+  background-color: var(--bg-green);
+  width: 100%;
+  border-radius: 0.5rem;
+
+  font-weight: bold;
+  color: var(--fc-white);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--bg-light-green);
+}
+
+/* media queries */
+@media (min-width: 30rem) {
+  .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 40rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .product-img {
+    height: 100%;
+  }
+}
