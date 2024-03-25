@@ -32,31 +32,24 @@ img {
 }
 
 body {
-  height: 100vh;
   background-color: var(--bg-beige);
-
   font-family: var(--ff-body);
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--fc-light-gray);
-  line-height: 1.4;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  line-height: 1.5;
 }
 
 .card-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  margin: 2rem 1rem;
+  margin: 1rem;
   overflow: hidden;
   border-radius: 1rem;
 }
 
 /* product img section */
 .product-img {
-  height: 15rem;
   width: 100%;
   object-fit: cover;
 }
@@ -132,5 +125,11 @@ body {
 
   .product-img {
     height: 100%;
+  }
+
+  body {
+    height: 100vh;
+    display: grid;
+    place-content: center;
   }
 }
