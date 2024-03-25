@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* CSS Reset */
 *,
 *::before,
@@ -16,26 +17,27 @@ img {
 
 :root {
   /* bg colors */
-  --bg-white: #fff;
-  --bg-beige: #fff8e7;
-  --bg-green: #00563b;
-  --bg-light-green: #177245;
+  --bg-white: hsl(0, 0%, 100%);
+  --bg-beige: hsl(30, 38%, 92%);
+  --bg-green: hsl(158, 36%, 37%);
+  --bg-dark-green: hsl(158, 36%, 27%);
   /* font colors */
-  --fc-light-gray: #555555;
-  --fc-black: #010b13;
-  --fc-green: #00563b;
-  --fc-white: #fff;
+  --fc-light-gray: hsl(228, 12%, 48%);
+  --fc-black: hsl(212, 21%, 14%);
+  --fc-green: hsl(158, 36%, 37%);
+  --fc-white: hsl(0, 0%, 100%);
   /* font family */
-  --ff-body: sans-serif;
-  --ff-headings: sans-serif;
+  --ff-body: 'Montserrat', sans-serif;
+  --ff-headings: 'Fraunces', serif;
 }
 
 body {
   height: 100vh;
   background-color: var(--bg-beige);
+
   font-family: var(--ff-body);
-  font-weight: normal;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 0.875rem;
   color: var(--fc-light-gray);
   line-height: 1.4;
 
@@ -63,40 +65,36 @@ body {
 .product-info {
   background-color: var(--bg-white);
   padding: 2rem;
+  display: grid;
+  gap: 1rem;
 }
 
 .product-tag {
   text-transform: uppercase;
-  font-size: 0.9rem;
   letter-spacing: 0.2rem;
-  margin-bottom: 0.5rem;
 }
 
 .product-name {
+  font-family: var(--ff-headings);
   color: var(--fc-black);
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1;
-  margin-bottom: 0.5rem;
-}
-
-.product-description {
-  margin-bottom: 1rem;
 }
 
 .price {
+  font-family: var(--ff-headings);
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--fc-green);
 
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
 }
 
 .prev-price {
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   font-weight: normal;
   color: var(--fc-light-gray);
   text-decoration: line-through;
@@ -109,7 +107,7 @@ body {
   width: 100%;
   border-radius: 0.5rem;
 
-  font-weight: bold;
+  font-weight: 700;
   color: var(--fc-white);
   cursor: pointer;
 
@@ -121,7 +119,7 @@ body {
 }
 
 .btn:hover {
-  background-color: var(--bg-light-green);
+  background-color: var(--bg-dark-green);
 }
 
 /* media queries */
